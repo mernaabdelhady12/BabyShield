@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Baby Shield</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<a href="#home" class="back-to-top">
+    ↑
+</a>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+
+        <h2>Baby Shield</h2>
+
+        <div class="nav-links">
+            <a href="#home">الرئيسية</a>
+            <a href="#vaccinations">التطعيمات</a>
+            <a href="#growth">النمو</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Baby Shield</h1>
+
+            <h2>رعاية أفضل لطفلك ❤️</h2>
+
+            <p>
+                تابعي تطعيمات طفلك ونموه بسهولة
+                من خلال مكان واحد.
+            </p>
+
+            <a href="#vaccinations" class="main-button">
+                ابدأي الآن
+            </a>
+
+        </div>
+        <!-- Features -->
+<section class="features">
+
+    <h2>كل ما يحتاجه طفلك في مكان واحد ❤️</h2>
+
+    <div class="features-container">
+
+        <div class="feature-card">
+            <div class="feature-icon">💉</div>
+            <h3>التطعيمات</h3>
+            <p>
+                اعرفي مواعيد تطعيمات طفلك بسهولة
+                حسب تاريخ ميلاده.
+            </p>
+        </div>
+
+
+        <div class="feature-card">
+            <div class="feature-icon">📏</div>
+            <h3>متابعة النمو</h3>
+            <p>
+                سجلي وزن وطول طفلك كل شهر
+                وتابعي تطوره.
+            </p>
+        </div>
+
+
+        <div class="feature-card">
+            <div class="feature-icon">❤️</div>
+            <h3>رعاية أفضل</h3>
+            <p>
+                Baby Shield يساعدك على متابعة
+                أهم مراحل نمو طفلك.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    </section>
+
+
+    <!-- Vaccinations -->
+    <section id="vaccinations" class="section">
+
+        <h2>جدول تطعيمات الطفل</h2>
+
+        <p>
+            أدخلي اسم الطفل وتاريخ ميلاده
+            ليظهر جدول التطعيمات تلقائيًا.
+        </p>
+
+
+        <div class="form-box">
+
+            <label for="childName">
+                اسم الطفل
+            </label>
+
+            <input
+                type="text"
+                id="childName"
+                placeholder="اكتبي اسم الطفل"
+            >
+
+
+            <label for="birthDate">
+                تاريخ الميلاد
+            </label>
+
+            <input
+    type="text"
+    id="birthDate"
+    placeholder="day/month/yea"
+>
+
+
+
+            <button onclick="generateVaccinationTable()">
+                عرض جدول التطعيمات
+            </button>
+
+        </div>
+
+
+        <div id="vaccinationResult"></div>
+
+    </section>
+
+
+    <!-- Growth -->
+    <section id="growth" class="section">
+
+        <h2>متابعة نمو الطفل</h2>
+
+        <p>
+            سجلي وزن وطول الطفل كل شهر
+            لمتابعة تطوره مع مرور الوقت.
+        </p>
+
+
+        <div class="growth-box">
+
+            <label for="growthMonth">
+                الشهر
+            </label>
+
+            <select id="growthMonth">
+
+                <option value="">
+                    اختاري الشهر
+                </option>
+
+                <option value="الشهر الأول">
+                    الشهر الأول
+                </option>
+
+                <option value="الشهر الثاني">
+                    الشهر الثاني
+                </option>
+
+                <option value="الشهر الثالث">
+                    الشهر الثالث
+                </option>
+
+                <option value="الشهر الرابع">
+                    الشهر الرابع
+                </option>
+
+                <option value="الشهر الخامس">
+                    الشهر الخامس
+                </option>
+
+                <option value="الشهر السادس">
+                    الشهر السادس
+                </option>
+
+                <option value="الشهر السابع">
+                    الشهر السابع
+                </option>
+
+                <option value="الشهر الثامن">
+                    الشهر الثامن
+                </option>
+
+                <option value="الشهر التاسع">
+                    الشهر التاسع
+                </option>
+
+                <option value="الشهر العاشر">
+                    الشهر العاشر
+                </option>
+
+                <option value="الشهر الحادي عشر">
+                    الشهر الحادي عشر
+                </option>
+
+                <option value="الشهر الثاني عشر">
+                    الشهر الثاني عشر
+                </option>
+
+            </select>
+
+
+            <label for="weight">
+                وزن الطفل بالكيلوجرام
+            </label>
+
+            <input
+                type="number"
+                id="weight"
+                placeholder="مثال: 5.5"
+                step="0.1"
+                min="0"
+            >
+
+
+            <label for="height">
+                طول الطفل بالسنتيمتر
+            </label>
+
+            <input
+                type="number"
+                id="height"
+                placeholder="مثال: 58"
+                step="0.1"
+                min="0"
+            >
+
+
+            <button onclick="saveGrowthData()">
+                حفظ القياس
+            </button>
+
+        </div>
+
+
+        <!-- Growth Table -->
+        <div id="growthResult"></div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>Baby Shield</h3>
+
+        <p>
+            لأن صحة طفلك تستحق المتابعة ❤️
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
